@@ -64,6 +64,88 @@ function charSelect(){
 
 
 
+function passLengthChooser(){
+  passLength = prompt("How long should your password be?  Please choose from 8 to 128 characters.")
+  passLengthInt = parseInt(passLength);
+  console.log(passLengthInt);
+
+  if(passLengthInt >= 8 && passLengthInt <= 128){
+    alert("Configuring time dilator for a length of " + passLengthInt + " characters.")
+  }
+  else{
+    alert("Please choose a length within the available parameters.")
+    passLengthChooser();
+  };
+};
+
+//Pull random characters from each array and then loop until password length is met.
+
+function getArray(){
+  //check to see which arrays to utilize in generation
+  if(lowerCaseInput == false && upperCaseInput == false && numberInput == false && specialCharInput == true){
+    //USE SPECIAL ARRAY ONLY HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == false && numberInput == true && specialCharInput == false){
+    //USE NUMBER ARRAY ONLY HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == false && numberInput == true && specialCharInput == true){
+    //USE NUM AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == true && numberInput == false && specialCharInput == false){
+    //USE UPPER ONLY HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == true && numberInput == false && specialCharInput == true){
+    //USE UPPER AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == true && numberInput == true && specialCharInput == false){
+    //USE UPPER AND NUMBER HERE
+  }
+
+  else if(lowerCaseInput == false && upperCaseInput == true && numberInput == true && specialCharInput == true){
+    //USE UPPER NUMBER AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == false && numberInput == false && specialCharInput == false){
+    //USE LOWER ONLY HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == false && numberInput == false && specialCharInput == true){
+    //USE LOWER AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == false && numberInput == true && specialCharInput == false){
+    //USE LOWER AND NUMBER HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == false && numberInput == true && specialCharInput == true){
+    //USE LOWER NUMBER AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == true && numberInput == false && specialCharInput == false){
+    //USE LOWER AND UPPER HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == true && numberInput == false && specialCharInput == true){
+    //USE LOWER UPPER AND SPECIAL HERE
+  }
+
+  else if(lowerCaseInput == true && upperCaseInput == true && numberInput == true && specialCharInput == false){
+    //USE LOWER UPPER NUMBERS HERE
+  }
+
+  else{
+    //USE ALL ARRAYS HERE
+    //FOR THIS AND ALL MULTI ARRAYS, PULL RANDOM ELEMENTS FROM EACH AND GENERATE A NEW ARRAY
+  }
+}
+
+
+//FUNCTION TO TAKE NEW ARRAY AND PULL RANDOM ELEMENTS FROM IT FOR THE LENGTH OF THE PASSWORD
 
 
 
