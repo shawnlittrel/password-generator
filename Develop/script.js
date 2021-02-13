@@ -84,88 +84,116 @@ function getArray(){
   //check to see which arrays to utilize in generation
   if(lowerCaseInput == false && upperCaseInput == false && numberInput == false && specialCharInput == true){
     //USE SPECIAL ARRAY ONLY HERE
+    bigArray = specialCharArray;
   }
 
   else if(lowerCaseInput == false && upperCaseInput == false && numberInput == true && specialCharInput == false){
     //USE NUMBER ARRAY ONLY HERE
+    bigArray = numberArray;
   }
 
   else if(lowerCaseInput == false && upperCaseInput == false && numberInput == true && specialCharInput == true){
     //USE NUM AND SPECIAL HERE
+    bigArray = numArray.concat(specialCharArray);
   }
 
   else if(lowerCaseInput == false && upperCaseInput == true && numberInput == false && specialCharInput == false){
     //USE UPPER ONLY HERE
+    bigArray = upperCaseArray;
   }
 
   else if(lowerCaseInput == false && upperCaseInput == true && numberInput == false && specialCharInput == true){
     //USE UPPER AND SPECIAL HERE
+    bigArray = upperCaseArray.concat(specialCharArray);
   }
 
   else if(lowerCaseInput == false && upperCaseInput == true && numberInput == true && specialCharInput == false){
     //USE UPPER AND NUMBER HERE
+    bigArray = upperCaseArray.concat(numberArray);
   }
 
   else if(lowerCaseInput == false && upperCaseInput == true && numberInput == true && specialCharInput == true){
     //USE UPPER NUMBER AND SPECIAL HERE
+    bigArray = upperCaseArray.concat(numberArray, specialCharArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == false && numberInput == false && specialCharInput == false){
     //USE LOWER ONLY HERE
+    bigArray = lowerCaseArray;
   }
 
   else if(lowerCaseInput == true && upperCaseInput == false && numberInput == false && specialCharInput == true){
     //USE LOWER AND SPECIAL HERE
+    bigArray = lowerCaseArray.concat(specialCharArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == false && numberInput == true && specialCharInput == false){
     //USE LOWER AND NUMBER HERE
+    bigArray = lowerCaseArray.concat(numberArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == false && numberInput == true && specialCharInput == true){
     //USE LOWER NUMBER AND SPECIAL HERE
+    bigArray = lowerCaseArray.concat(numberArray, specialCharArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == true && numberInput == false && specialCharInput == false){
     //USE LOWER AND UPPER HERE
+    bigArray = lowerCaseArray.concat(upperCaseArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == true && numberInput == false && specialCharInput == true){
     //USE LOWER UPPER AND SPECIAL HERE
+    bigArray = lowerCaseArray.concat(upperCaseArray, specialCharArray);
   }
 
   else if(lowerCaseInput == true && upperCaseInput == true && numberInput == true && specialCharInput == false){
     //USE LOWER UPPER NUMBERS HERE
+    bigArray = lowerCaseArray.concat(upperCaseArray, numberArray);
   }
 
   else{
     //USE ALL ARRAYS HERE
+    bigArray = lowerCaseArray.concat(upperCaseArray, numberArray, specialCharArray);
     //FOR THIS AND ALL MULTI ARRAYS, PULL RANDOM ELEMENTS FROM EACH AND GENERATE A NEW ARRAY
   }
 }
 
-
 //FUNCTION TO TAKE NEW ARRAY AND PULL RANDOM ELEMENTS FROM IT FOR THE LENGTH OF THE PASSWORD
+function generate(){
+  var i;
+  var passStr = "";
+  for (i = 0; i < passLengthInt; i++) {
+    var randomChar = bigArray[Math.floor(Math.random()*bigArray.length)];
+    passChar = randomChar;
+    passStr += passChar;
+  };
+  console.log(passStr);
+}
 
 
 
-//Print generated password into textarea id=password
 
+function clickEvent(){
 charSelect();
 passLengthChooser();
+getArray();
+generate();
+}
 
-/*
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+/*function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
