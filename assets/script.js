@@ -11,48 +11,51 @@ let upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'
 let numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 let specialCharArray = [' ', '!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~']
 
-//Click button to start prompts for password criteria (lowercase, uppercase, numbers, special char)
+debugger;
   //NONE OF BELOW RUNS UNTIL CLICK BUTTON IS RECEIVED
-
-function charSelect(){  
-
-  //confirm box for lowercase letters - OK to add, cancel to leave out
-    lowerCaseInput = confirm("Would you like lower case letters?");
-
-  //confirm box for uppercase letters - OK to add, cancel to leave out
-    upperCaseInput = confirm("Would you like upper case letters?");
-
-  //confirm box for numbers - OK to add, cancel to leave out 
-    numberInput = confirm("Would you like numbers?");
-
-  //confirm box for special char - OK to add, cancel to leave out
-    specialCharInput = confirm("Would you like special characters?");
-
-  //Validate and choose at least one of each selected criteria
-    if( lowerCaseInput == true || upperCaseInput == true || numberInput == true || specialCharInput == true){
-      alert("Thanks for your input. Engaging code tumblers.")
-      console.log(lowerCaseInput + upperCaseInput + numberInput + specialCharInput);
-    }
-    else{
-      alert("Please choose at least one character type.");
-      charSelect();
-    }; 
-};
-
-//After password criteria, choose length of password (8-128 char)
-  //text input box that asks for length (8-128), and asks again if blank or not in that range
-  function passLengthChooser(){
-    passLength = prompt("How long should your password be?  Please choose from 8 to 128 characters.")
-    passLengthInt = parseInt(passLength);
-
-    if(passLengthInt >= 8 && passLengthInt <= 128){
-      alert("Configuring time dilator for a length of " + passLengthInt + " characters.")
-    }
-    else{
-      alert("Please choose a length within the available parameters.")
-      passLengthChooser();
-    };
+function charSelect(){
+  if(document.getElementById("lowercase").checked){
+    lowerCaseInput = true;
+  }
+  else{
+    lowerCaseInput = false;
   };
+
+  if(document.getElementById("uppercase").checked){
+    upperCaseInput = true;
+  }
+  else{
+    upperCaseInput = false;
+  };
+
+  if(document.getElementById("number-check").checked){
+    numberInput = true;
+  }
+  else{
+    numberInput = false;
+  };
+
+  if(document.getElementById("special-check").checked){
+    specialCharInput = true;
+  }
+  else{
+    specialCharInput = false;
+  };
+
+  passLength = document.getElementById("length-box").value;
+  passLengthInt = parseInt(passLength);
+
+  if(passLengthInt > 0 &&
+    (lowerCaseInput == true ||
+      upperCaseInput == true ||
+      numberInput == true ||
+      specialCharInput == true)){
+      return;
+  }
+  else{
+    alert("Please choose at least one character type and a length between 8 and 128 characters");
+  }
+}
 
 //Pull random characters from each array and then loop until password length is met.
 
@@ -145,7 +148,7 @@ function generate(){
     passStr += passChar;
   };
   document.getElementById('password').value = passStr;
-  alert("Please copy your password from the textbox below.  Refresh to generate a new one!")
+  alert("Please copy your password from the textbox below.  Click Generate again for a new one!");
 }
 
 // Get references to the #generate element
@@ -153,7 +156,7 @@ var generateBtn = document.querySelector("#generate");
 
 function clickEvent(){
 charSelect();
-passLengthChooser();
+//passLengthChooser();
 getArray();
 generate();
 };

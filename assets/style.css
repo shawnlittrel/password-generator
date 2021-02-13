@@ -54,6 +54,28 @@ header {
   min-height: 100px;
 }
 
+.selection-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-wrapper{
+  margin: 0 auto;
+  padding: 3px 3px 3px 1px;
+  text-align: center;
+  width: 46%
+}
+
+.length-wrapper{
+  justify-content: center;
+  width: 35%;
+  margin: 0 auto;
+}
+
+#length-box{
+  width: 100%;
+}
+
 .card-footer {
   text-align: center;
 }
