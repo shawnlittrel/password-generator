@@ -10,27 +10,27 @@ After using this generator for some time, I found that there were too many alert
 ---
 Version 1.0 when the page loads
 
-![Screenshot](/assets/images/Generator-1.0-Empty.JPG)
+![Screenshot](/assets/images/Generator-1.0-Empty.JPG?raw=true)
 
 Version 1.0 user prompts
 
-![Screenshot](/assets/images/Generator-1.0-Prompt.JPG)
+![Screenshot](/assets/images/Generator-1.0-Prompt.JPGraw=true)
 
 Version 1.0 password output
 
-![Screenshot](/assets/images/Generator-1.0-Output.JPG)
+![Screenshot](/assets/images/Generator-1.0-Output.JPGraw=true)
 
 Version 2.0 when the page loads
 
-![Screenshot](/assets/images/Generator-2.0-Page.JPG)
+![Screenshot](/assets/images/Generator-2.0-Page.JPGraw=true)
 
 Version 2.0 input options
 
-![Screenshot](/assets/images/Generator-2.0-Input.JPG)
+![Screenshot](/assets/images/Generator-2.0-Input.JPGraw=true)
 
 Version 2.0 output display
 
-![Screenshot](/assets/images/Generator-2.0-Output.JPG)
+![Screenshot](/assets/images/Generator-2.0-Output.JPGraw=true)
 
 **See Code in Action**
 ---
