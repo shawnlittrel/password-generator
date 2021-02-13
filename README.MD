@@ -10,14 +10,29 @@ After using this generator for some time, I found that there were too many alert
 ---
 Version 1.0 when the page loads
 
-![Screenshot](/assets/images/Generator-1.0-Empty)
+![Screenshot](/assets/images/Generator-1.0-Empty.JPG)
 
 Version 1.0 user prompts
 
-![Screenshot](/assets/images/Generator-1.0-Prompt)
+![Screenshot](/assets/images/Generator-1.0-Prompt.JPG)
 
 Version 1.0 password output
 
-![Screenshot](/assets/images/Generator-1.0-Output)
+![Screenshot](/assets/images/Generator-1.0-Output.JPG)
 
 Version 2.0 when the page loads
+
+![Screenshot](/assets/images/Generator-2.0-Page.JPG)
+
+Version 2.0 input options
+
+![Screenshot](/assets/images/Generator-2.0-Input.JPG)
+
+Version 2.0 output display
+
+![Screenshot](/assets/images/Generator-2.0-Output.JPG)
+
+**See Code in Action**
+---
+Version 1.0 is published at:
+https://shawnlittrel.github.io/password-generator
