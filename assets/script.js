@@ -31,7 +31,6 @@ function charSelect(){
   //Validate and choose at least one of each selected criteria
     if( lowerCaseInput == true || upperCaseInput == true || numberInput == true || specialCharInput == true){
       alert("Thanks for your input. Engaging code tumblers.")
-      console.log(lowerCaseInput + upperCaseInput + numberInput + specialCharInput);
     }
     else{
       alert("Please choose at least one character type.");
