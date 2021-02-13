@@ -14,23 +14,23 @@ Version 1.0 when the page loads
 
 Version 1.0 user prompts
 
-![Screenshot](/assets/Images/Generator-1.0-Prompt.JPGraw=true)
+![Screenshot](/assets/Images/Generator-1.0-Prompt.JPG?raw=true)
 
 Version 1.0 password output
 
-![Screenshot](/assets/Images/Generator-1.0-Output.JPGraw=true)
+![Screenshot](/assets/Images/Generator-1.0-Output.JPG?raw=true)
 
 Version 2.0 when the page loads
 
-![Screenshot](/assets/Images/Generator-2.0-Page.JPGraw=true)
+![Screenshot](/assets/Images/Generator-2.0-Page.JPG?raw=true)
 
 Version 2.0 input options
 
-![Screenshot](/assets/Images/Generator-2.0-Input.JPGraw=true)
+![Screenshot](/assets/Images/Generator-2.0-Input.JPG?raw=true)
 
 Version 2.0 output display
 
-![Screenshot](/assets/Images/Generator-2.0-Output.JPGraw=true)
+![Screenshot](/assets/Images/Generator-2.0-Output.JPG?raw=true)
 
 **See Code in Action**
 ---
