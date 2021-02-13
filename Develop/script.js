@@ -1,5 +1,3 @@
-// Assignment code here
-
 //Global variables
 var lowerCaseInput = false;
 var upperCaseInput = false;
@@ -20,19 +18,15 @@ function charSelect(){
 
   //confirm box for lowercase letters - OK to add, cancel to leave out
     lowerCaseInput = confirm("Would you like lower case letters?");
-    console.log(lowerCaseInput);
 
   //confirm box for uppercase letters - OK to add, cancel to leave out
     upperCaseInput = confirm("Would you like upper case letters?");
-    console.log(upperCaseInput);
 
   //confirm box for numbers - OK to add, cancel to leave out 
     numberInput = confirm("Would you like numbers?");
-    console.log(numberInput);
 
   //confirm box for special char - OK to add, cancel to leave out
     specialCharInput = confirm("Would you like special characters?");
-    console.log(specialCharInput);
 
   //Validate and choose at least one of each selected criteria
     if( lowerCaseInput == true || upperCaseInput == true || numberInput == true || specialCharInput == true){
@@ -50,7 +44,6 @@ function charSelect(){
   function passLengthChooser(){
     passLength = prompt("How long should your password be?  Please choose from 8 to 128 characters.")
     passLengthInt = parseInt(passLength);
-    console.log(passLengthInt);
 
     if(passLengthInt >= 8 && passLengthInt <= 128){
       alert("Configuring time dilator for a length of " + passLengthInt + " characters.")
@@ -60,23 +53,6 @@ function charSelect(){
       passLengthChooser();
     };
   };
-
-
-
-
-function passLengthChooser(){
-  passLength = prompt("How long should your password be?  Please choose from 8 to 128 characters.")
-  passLengthInt = parseInt(passLength);
-  console.log(passLengthInt);
-
-  if(passLengthInt >= 8 && passLengthInt <= 128){
-    alert("Configuring time dilator for a length of " + passLengthInt + " characters.")
-  }
-  else{
-    alert("Please choose a length within the available parameters.")
-    passLengthChooser();
-  };
-};
 
 //Pull random characters from each array and then loop until password length is met.
 
@@ -156,8 +132,8 @@ function getArray(){
     //USE ALL ARRAYS HERE
     bigArray = lowerCaseArray.concat(upperCaseArray, numberArray, specialCharArray);
     //FOR THIS AND ALL MULTI ARRAYS, PULL RANDOM ELEMENTS FROM EACH AND GENERATE A NEW ARRAY
-  }
-}
+  };
+};
 
 //FUNCTION TO TAKE NEW ARRAY AND PULL RANDOM ELEMENTS FROM IT FOR THE LENGTH OF THE PASSWORD
 function generate(){
@@ -168,33 +144,16 @@ function generate(){
     passChar = randomChar;
     passStr += passChar;
   };
-  console.log(passStr);
+  document.getElementById('password').value = passStr;
+  alert("Please copy your password from the textbox below.  Refresh to generate a new one!")
 }
 
-
-
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
 function clickEvent(){
 charSelect();
 passLengthChooser();
 getArray();
 generate();
-}
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-/*function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-*/
+};
